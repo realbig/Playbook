@@ -1,0 +1,27 @@
+{% include header.html %}
+
+<body class="default-template off-canvas-wrapper">
+
+    <div class="off-canvas position-left nav-menu">
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+        
+        {% include head.html %}
+        
+        <section id="site-content">
+            
+            <div class="row">
+                
+                <div class="small-12 medium-9 columns post-content">
+                    {{ content }}
+                </div>
+                
+                <div class="small-12 medium-3 columns sidebar">
+                    table of contents, maybe
+                </div>
+            
+        </section>
+        
+    </div>
+
+{% include footer.html %}

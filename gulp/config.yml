@@ -1,0 +1,115 @@
+browsersync:
+  notify: true
+  open:   false
+  port:   3000
+  server:
+    basedir: "_site/"
+  xip:    true
+
+clean:
+  # The jekyll build dir
+  - "_site"
+
+copy:
+  # Paths to static assets that aren't (S)CSS or JavaScript
+  # because these are completely handled by the sass and javascript tasks
+  assets:
+    # all files below the assets dir
+    - "assets/**/*"
+    # exclusions:
+    - "!assets/{js,scss,css}/**/*"   # js, scss and css files
+    - "!assets/css{,/**}"            # css dir
+    - "!assets/js{,/**}"             # js dir
+    - "!assets/sass{,/**}"           # sass dir
+    - "!assets/vendor{,/**}"         # vendor dir
+  dist: "_site/assets/"
+  notification: "Running Copy"
+
+javascript:
+  dest:
+    jekyllRoot: "_site/assets/js/"
+    buildDir: "_site/assets/js/"
+  # filename to output
+  filename: "script.js"
+  notification: "Running JavaScript"
+  # Paths to JavaScript libraries, which are combined into one file
+  src:
+
+    # Core Foundation files, all Foundation components need this!
+    - "build/vendor/js/foundation/foundation.core.js"
+
+    # Individual Foundation components
+    # If you aren't using a component, just remove it from the list
+    # - "build/vendor/js/foundation/foundation.abide.js"
+    # - "build/vendor/js/foundation/foundation.accordion.js"
+    # - "build/vendor/js/foundation/foundation.accordionMenu.js"
+    # - "build/vendor/js/foundation/foundation.drilldown.js"
+    # - "build/vendor/js/foundation/foundation.dropdown.js"
+    - "build/vendor/js/foundation/foundation.dropdownMenu.js"
+    # - "build/vendor/js/foundation/foundation.equalizer.js"
+    # - "build/vendor/js/foundation/foundation.interchange.js"
+    # - "build/vendor/js/foundation/foundation.magellan.js"
+    - "build/vendor/js/foundation/foundation.offcanvas.js"
+    # - "build/vendor/js/foundation/foundation.orbit.js"
+    # - "build/vendor/js/foundation/foundation.responsiveMenu.js"
+    # - "build/vendor/js/foundation/foundation.responsiveToggle.js"
+    # - "build/vendor/js/foundation/foundation.reveal.js"
+    # - "build/vendor/js/foundation/foundation.slider.js"
+    # - "build/vendor/js/foundation/foundation.sticky.js"
+    # - "build/vendor/js/foundation/foundation.tabs.js"
+    # - "build/vendor/js/foundation/foundation.toggler.js"
+    # - "build/vendor/js/foundation/foundation.tooltip.js"
+    - "build/vendor/js/foundation/foundation.util.box.js"
+    - "build/vendor/js/foundation/foundation.util.keyboard.js"
+    - "build/vendor/js/foundation/foundation.util.mediaQuery.js"
+    - "build/vendor/js/foundation/foundation.util.motion.js"
+    - "build/vendor/js/foundation/foundation.util.nest.js"
+    # - "build/vendor/js/foundation/foundation.util.timerAndImageLoader.js"
+    # - "build/vendor/js/foundation/foundation.util.touch.js"
+    # - "build/vendor/js/foundation/foundation.util.triggers.js"
+
+    # Paths to your own project code are here
+    # All the files in this list and in the js dir are concatenated into script.js
+    - "!build/js/script.js"
+    - "build/js/*.js"
+
+jekyll:
+  notification: "Running jekyll"
+
+revision:
+  revision:
+    dest: "_site/assets/"
+    manifest:
+      dest: "./"
+    src:
+      - "assets/css/style.css"
+      - "assets/js/script.js"
+      - "assets/img/**"
+  collect:
+    dest: "_site"
+    src:
+      - "./rev-manifest.json"
+      - "_site/*.{html,xml,txt,json,css,js}"
+      - "_site/**/*.{html,xml,txt,json,css,js}"
+      - "!_site/assets/vendor"
+
+sass:
+  # Autoprefixer will make sure your CSS works with these browsers
+  compatibility:
+    - "last 2 versions"
+    - "ie >= 9"
+  dest:
+    jekyllRoot: "_site/assets/css/"
+    buildDir: "_site/assets/css/"
+  notification: "Running Sass"
+  src: "build/sass/style.scss"
+
+watch:
+  images: "assets/img/**/*"
+  javascript: "build/js/**/*.js"
+  sass: "build/sass/**/*.scss"
+  pages:
+    - "*.{md,html,yml,xml}"
+    - "{_data,_includes,_layouts,_pages,_posts,_process,_contributing}/**/*.{md,html,yml,xml,markdown}"
+    - "!_site/**/*.*"
+    - "!build/**/*.*"

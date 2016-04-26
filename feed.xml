@@ -4,10 +4,10 @@
     <title>Real Big Playbook</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://realbig.github.io/playbook/</link>
-    <atom:link href="http://realbig.github.io/playbook/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Apr 2016 16:36:47 -0400</pubDate>
-    <lastBuildDate>Tue, 26 Apr 2016 16:36:47 -0400</lastBuildDate>
+    <link>http://realbig.github.io/playbook/playbook/</link>
+    <atom:link href="http://realbig.github.io/playbook/playbook/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 26 Apr 2016 16:41:47 -0400</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2016 16:41:47 -0400</lastBuildDate>
     <generator>Jekyll v3.0.4</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Tue, 26 Apr 2016 08:39:55 -0400</pubDate>
-        <link>http://realbig.github.io/playbook/2016/04/26/helloworld/</link>
-        <guid isPermaLink="true">http://realbig.github.io/playbook/2016/04/26/helloworld/</guid>
+        <link>http://realbig.github.io/playbook/playbook/2016/04/26/helloworld/</link>
+        <guid isPermaLink="true">http://realbig.github.io/playbook/playbook/2016/04/26/helloworld/</guid>
         
         <category>USA</category>
         

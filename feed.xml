@@ -6,8 +6,8 @@
 </description>
     <link>http://realbig.github.io/playbook/playbook/</link>
     <atom:link href="http://realbig.github.io/playbook/playbook/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Apr 2016 16:43:05 -0400</pubDate>
-    <lastBuildDate>Tue, 26 Apr 2016 16:43:05 -0400</lastBuildDate>
+    <pubDate>Wed, 27 Apr 2016 09:10:58 -0400</pubDate>
+    <lastBuildDate>Wed, 27 Apr 2016 09:10:58 -0400</lastBuildDate>
     <generator>Jekyll v3.0.4</generator>
     
       <item>
@@ -31,7 +31,7 @@
         <link>http://realbig.github.io/playbook/playbook/2016/04/26/helloworld/</link>
         <guid isPermaLink="true">http://realbig.github.io/playbook/playbook/2016/04/26/helloworld/</guid>
         
-        <category>USA</category>
+        <category>something</category>
         
         
         <category>test</category>

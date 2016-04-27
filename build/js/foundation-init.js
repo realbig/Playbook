@@ -1,9 +1,5 @@
 jQuery( function( $ ) {
-    
-    $( document ).ready( function() {
         
-        $( document ).foundation();
-        
-    } );
+    $( document ).foundation();
     
 } );

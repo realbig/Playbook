@@ -4,7 +4,7 @@ browsersync:
   port:   3000
   server:
     basedir: "_site/"
-  xip:    true
+  xip:    false
 
 clean:
   # The jekyll build dir
@@ -68,7 +68,7 @@ javascript:
     - "build/vendor/js/foundation/foundation.util.nest.js"
     # - "build/vendor/js/foundation/foundation.util.timerAndImageLoader.js"
     # - "build/vendor/js/foundation/foundation.util.touch.js"
-    # - "build/vendor/js/foundation/foundation.util.triggers.js"
+    - "build/vendor/js/foundation/foundation.util.triggers.js"
 
     # Paths to your own project code are here
     # All the files in this list and in the js dir are concatenated into script.js

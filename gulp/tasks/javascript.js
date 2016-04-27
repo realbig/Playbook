@@ -16,7 +16,7 @@ gulp.task('javascript', function() {
     .pipe($.babel())
     .pipe($.concat(config.filename))
     .pipe($.if(isProduction, $.uglify({ mangle: false })))
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe($.sourcemaps.write('.'))
     // Write the file to source dir, it's the source for the revision task!
     .pipe(gulp.dest(config.dest.jekyllRoot))
     // Write to build dir only for development builds

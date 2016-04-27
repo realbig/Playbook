@@ -30,6 +30,7 @@ $anchor-color: scale-color( $secondary-color, $lightness: -15% );
 $anchor-color-hover: scale-color( $anchor-color, $lightness: -25% );
 
 @import url(//fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 
 $header-font-family: 'Oswald', sans-serif;
 

@@ -4,6 +4,7 @@
     font-family: $header-font-family;
     font-weight: 600;
     text-transform: uppercase;
+    width: 100%;
 
     .top-bar-left, .top-bar-right {
         width: 45%;
@@ -35,7 +36,7 @@
     }
 
     .top-bar-section {
-        display: inline-block;
+        display: block;
     }
 
     .top-bar-logo {

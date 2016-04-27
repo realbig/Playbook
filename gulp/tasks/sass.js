@@ -16,7 +16,7 @@ gulp.task('sass', function() {
       .on('error', $.sass.logError))
     .pipe(autoprefixer(config.compatibility))
     .pipe(minifycss)
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe($.sourcemaps.write('.'))
     // Write the file to source dir, it's the source for the revision task!
     .pipe(gulp.dest(config.dest.jekyllRoot))
     // Write to build dir only for development builds

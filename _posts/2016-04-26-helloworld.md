@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2016-04-26 08:39:55-0400
 categories: test
-tags: USA
+tags: something
 ---
 
 You'll find this post in your `_posts` directory.

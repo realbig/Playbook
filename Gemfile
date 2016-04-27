@@ -5,8 +5,10 @@ gem 'github-pages', group: :jekyll_plugins
 # ruby '2.2.0' minimum
 
 # Gem Requirements
-gem 'sass',  '>=3.4.3'
-gem 'jekyll', '>=3.0'
-gem 'jekyll-sitemap'
-gem 'jekyll-paginate'
-gem 'jekyll-archives'
+group :jekyll_plugins do
+    gem 'sass',  '>=3.4.3'
+    gem 'jekyll', '>=3.0'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-paginate'
+    gem 'jekyll-archives'
+end

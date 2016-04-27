@@ -1,0 +1,80 @@
+@mixin icon {
+    font-family: 'rbmlogo', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin stacked-icon {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    position: relative !important;
+    height: 1em;
+    width: 1em;
+}
+
+@mixin stacked-icon-before-after {
+    display: block;
+    position: absolute;
+    white-space: normal;
+    top: 0.143em;
+    left: 0.143em;
+    text-indent: 0;
+    speak: none;
+    
+    // Transitions
+    transition: all 0.25s ease-in-out, all 0.25s ease-in-out;
+    transition-property: all, all;
+    transition-duration: 0.25s, 0.25s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: initial, initial;
+}
+
+[class^='rbm-logo-icon'], [class*=' rbm-logo-icon'], [class^='stacked-rbm-logo-icon'], [class*=' stacked-rbm-logo-icon'] {
+    @include icon;
+}
+
+[class^='stacked-rbm-logo-icon'], [class*=' stacked-rbm-logo-icon'] {
+    @include stacked-icon;
+}
+
+[class^='stacked-rbm-logo-icon']:before, [class*=' stacked-rbm-logo-icon']:before, [class^="stacked-rbm-logo-icon"]:after, [class*=' stacked-rbm-logo-icon']:after, [class^='stacked-rbm-logo-icon'] span:before, [class*=' stacked-rbm-logo-icon'] span:before, [class^="stacked-rbm-logo-icon"] span:after, [class*=' stacked-rbm-logo-icon'] span:after {
+    @include stacked-icon-before-after;
+}
+
+.rbm-logo-icon { // Single color, no blurred bulb
+    content: '\e901';
+}
+
+// Stacked Icons for Multi-Color
+
+$gear: #a4cd39;
+$bulb: #12538f;
+
+[class^='stacked-rbm-logo-icon']:before, [class*=' stacked-rbm-logo-icon']:before {
+    color: $gear;
+}
+
+[class^='stacked-rbm-logo-icon']:after, [class*=' stacked-rbm-logo-icon']:after, [class^='stacked-rbm-logo-icon'] span:after, [class*=' stacked-rbm-logo-icon'] span:after {
+    color: $bulb;
+}
+
+.stacked-rbm-logo-icon:before { // Gear
+    content: '\e903';
+}
+
+.stacked-rbm-logo-icon:after { // Bulb
+    content: '\e902';
+}
+
+.stacked-rbm-logo-icon:hover span:after { // Bulb Blur is only shown on hover
+    content: '\e900';
+}

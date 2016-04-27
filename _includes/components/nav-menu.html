@@ -1,7 +1,30 @@
-<nav>
-  <ul class="menu clearfix float-right">
-    {% for item in site.data.nav-main %}
-      <li><a href="{{ item.url }}">{{ item.link }}</a></li>
-    {% endfor %}
-  </ul>
+<nav class="top-bar">
+    <div class="top-bar-left mobile-menu show-for-small-only">
+        <div class="menu-icon-wrapper">
+            <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+        </div>
+    </div>
+    <div class="top-bar-left nav-menu">
+        <ul class="menu hide-for-small-only">
+            {% for item in site.data.nav-main %}
+                <li><a href="{{ item.url }}" title="{{ item.text }}">{{ item.text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="top-bar-section top-bar-logo nav-menu">
+        <ul class="menu">
+            <li>
+                <a href="{{ "/" | prepend: site.baseurl }}" title="Home">
+                    <span class="stacked-rbm-logo-icon"><span></span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="top-bar-right nav-menu">
+        <ul class="menu hide-for-small-only">
+            {% for item in site.data.nav-main %}
+                <li><a href="{{ item.url }}" title="{{ item.text }}">{{ item.text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </nav>

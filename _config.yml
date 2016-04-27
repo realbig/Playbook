@@ -45,6 +45,12 @@ jekyll-archives:
     tag: /tag/:name/
     category: /category/:name/
     
+data:
+    nav-main:
+        -
+            url: /contributing/installing-jekyll/
+            text: 'Installing Jekyll'
+    
 gems:
   - jekyll-archives
   - jekyll-sitemap

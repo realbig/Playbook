@@ -1,0 +1,29 @@
+/*
+Adds some functionality to foundation.
+
+@since 0.1.0
+*/
+
+// Class names
+$class-names: small-only,
+    small,
+    medium-only,
+    medium,
+    large-only,
+    large,
+    xlarge-only,
+    xlarge,
+    xxlarge-only,
+    xxlarge;
+
+// Breakpoints
+$class-breakpoints: $small-only,
+    $small-up,
+    $medium-only,
+    $medium-up,
+    $large-only,
+    $large-up,
+    $xlarge-only,
+    $xlarge-up,
+    $xxlarge-only,
+    $xxlarge-up;

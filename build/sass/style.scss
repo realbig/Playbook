@@ -5,8 +5,8 @@
 @import "../../node_modules/motion-ui/src/motion-ui";
 
 // Dependencies
-@import "settings.scss";
 @import "functions.scss";
+@import "settings.scss";
 
 // Foundation
 // Here we control all the various Foundation components to use
@@ -24,7 +24,6 @@
 @include foundation-top-bar;
 @include foundation-menu;
 @include foundation-menu-icon;
-@include foundation-off-canvas;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-off-canvas;
@@ -33,5 +32,11 @@
 @include foundation-table;
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import "global/base";
+@import "global/foundation-extend";
+@import "global/icons";
+
+@import "static/top-bar";
 
 @import "jekyll/syntax-highlighting";

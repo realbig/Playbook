@@ -4,12 +4,13 @@
 
 /* Override Foundation's _settings.scss here, or store your own variables */
 
-$dark-color: #333;
-$light-color: #fff;
+$dark-color: #222;
+$light-color: #ddd;
 
-$topbar-background: $primary-color;
+$topbar-background: $dark-color;
 $offcanvas-background: $topbar-background;
 
+$topbar-link-color: null;
 @if lightness( $topbar-background ) < 50% {
 
     $topbar-link-color: $light-color;
@@ -27,6 +28,10 @@ $titlebar-icon-color-hover: darken( $topbar-link-color, 20% );
 // We use these to style anchors
 $anchor-color: scale-color( $secondary-color, $lightness: -15% );
 $anchor-color-hover: scale-color( $anchor-color, $lightness: -25% );
+
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+$header-font-family: 'Oswald', sans-serif;
 
 // Media query ranges
 $small-range: (0em, 40em);

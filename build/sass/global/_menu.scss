@@ -1,0 +1,48 @@
+ul.menu {
+
+    > li {
+
+        a {
+
+            position: relative;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                border-top: 0.1em solid;
+                height: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: opacity 300ms, top 300ms, bottom 300ms;
+            }
+            
+            &:before {
+                top: 0.25em;
+            }
+            
+            &:after {
+                bottom: 0.25em;
+            }
+
+            &:hover {
+
+                &:before, &:after {
+                    opacity: 1;
+                }
+
+                &:before {
+                    top: -0.05em;
+                }
+
+                &:after {
+                    bottom: -0.05em;
+                }
+
+            }
+
+        }
+
+    }
+
+}

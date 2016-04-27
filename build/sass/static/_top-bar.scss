@@ -13,6 +13,11 @@
             > li {
                 > a {
                     color: $topbar-link-color;
+                    
+                    &:before, &:after {
+                        border-color: $topbar-link-color;
+                    }
+                    
                 }
             }
         }
@@ -56,6 +61,10 @@
                 
                 a {
                     font-size: 5em;
+                    
+                    &:before, &:after {
+                        border: none;
+                    }
                     
                     span.stacked-rbm-logo-icon {
                         margin-left: -0.25em;

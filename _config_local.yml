@@ -1,0 +1,2 @@
+baseurl: ""
+url: "" # Blank both of these out when building for a local environment

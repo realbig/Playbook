@@ -1,0 +1,11 @@
+.collections-next-prev {
+    
+    @media #{$medium-up} {
+    
+        .next {
+            text-align: right;
+        }
+        
+    }
+    
+}

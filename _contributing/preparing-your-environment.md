@@ -2,6 +2,7 @@
 layout: page
 title:  "Preparing Your Environment"
 date:   2016-04-26 08:39:55-0400
+order: 1
 ---
 
 {{ title }}
@@ -44,3 +45,5 @@ gem install bundler
 {% endhighlight %}
 
 [Bundler](http://bundler.io/) is similar to [npm](https://www.npmjs.com/package/npm) for Ruby projects and will help us manage our Ruby Gem dependencies (Including Jekyll itself)
+
+{% include collections-prev-next.html %}

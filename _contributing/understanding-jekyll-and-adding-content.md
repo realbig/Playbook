@@ -2,6 +2,7 @@
 layout: page
 title:  "Understanding Jekyll and Adding Content"
 date:   2016-04-28 08:39:55-0400
+order: 3
 ---
 
 {{ title }}
@@ -82,3 +83,5 @@ Collections can be easily added by creating a relevant entry in `/_config.yml` p
         output: true
         permalink: /contributing/:path/
 {% endhighlight %}
+
+{% include collections-prev-next.html %}

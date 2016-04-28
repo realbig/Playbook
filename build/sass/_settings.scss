@@ -7,6 +7,8 @@
 $dark-color: #222;
 $light-color: #ddd;
 
+$primary-color: #599E00;
+
 $topbar-background: $dark-color;
 $offcanvas-background: $topbar-background;
 
@@ -26,7 +28,7 @@ $titlebar-icon-color: $topbar-link-color;
 $titlebar-icon-color-hover: darken( $topbar-link-color, 20% );
 
 // We use these to style anchors
-$anchor-color: scale-color( $secondary-color, $lightness: -15% );
+$anchor-color: scale-color( $primary-color, $lightness: -15% );
 $anchor-color-hover: scale-color( $anchor-color, $lightness: -25% );
 
 @import url(//fonts.googleapis.com/css?family=Oswald:400,300,700);

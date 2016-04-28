@@ -30,7 +30,7 @@
         </style>
     </head>
 
-<body class="default-template off-canvas-wrapper">
+<body class="off-canvas-wrapper">
     
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
@@ -74,7 +74,7 @@
 
                 <div class="row">
 
-                    <div class="small-12 medium-9 columns post-content">
+                    <div class="small-12 columns post-content">
                         <article class="post">
 
   <header class="post-header">
@@ -114,14 +114,29 @@ bundle update</code></pre></figure>
 
 <p>to install all the dependencies necessary for <a href="/playbook/contributing/building/">&#8220;Building&#8221; step</a> later.</p>
 
+<script>
+    document.body.onkeyup = function(e){
+        if (e.keyCode == '37') { window.location = '/contributing/preparing-your-environment/'; }
+        if (e.keyCode == '39') { window.location = '/contributing/understanding-jekyll-and-adding-content/'; }
+    };
+</script>
+
+<div class="row collections-next-prev">
+
+    <div class="small-12 medium-6 columns prev">
+        <a href="/contributing/preparing-your-environment/" title="Preparing Your Environment">Previous: Preparing Your Environment</a>
+    </div>
+
+    <div class="small-12 medium-6 columns next">
+        <a href="/contributing/understanding-jekyll-and-adding-content/" title="Understanding Jekyll and Adding Content">Next: Understanding Jekyll and Adding Content</a>
+    </div>
+    
+</div>
+
   </div>
 
 </article>
 
-                    </div>
-
-                    <div class="small-12 medium-3 columns sidebar">
-                        table of contents, maybe
                     </div>
 
             </section>

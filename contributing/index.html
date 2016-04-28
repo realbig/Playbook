@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Building &ndash; Real Big Playbook</title>
+        <title>Contributing To This Website &ndash; Real Big Playbook</title>
         <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 " />
         <meta name="google-site-verification" content="">
@@ -30,7 +30,7 @@
         </style>
     </head>
 
-<body class="default-template off-canvas-wrapper">
+<body class="off-canvas-wrapper">
     
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
@@ -74,33 +74,42 @@
 
                 <div class="row">
 
-                    <div class="small-12 medium-9 columns post-content">
-                        <article class="post">
+                    <div class="small-12 columns post-content">
+                        <div class="home">
 
-  <header class="post-header">
-    <h1 class="post-title">Building</h1>
-  </header>
+    <h1 class="page-heading">Contributing To This Website</h1>
 
-  <div class="post-content">
-    
-<p>As you may have noticed in the <a href="/playbook/contributing/cloning-the-repository/">&#8220;Cloning the Repository&#8221; step</a>, this website uses <a href="http://gulpjs.com/">gulp</a> for automating tasks.</p>
+    <ol class="post-list">
+        
+        
+          <li>
+            <h2>
+              <a class="post-link" href="/playbook/contributing/preparing-your-environment/">Preparing Your Environment</a>
+            </h2>
+          </li>
+        
+          <li>
+            <h2>
+              <a class="post-link" href="/playbook/contributing/cloning-the-repository/">Cloning The Repository</a>
+            </h2>
+          </li>
+        
+          <li>
+            <h2>
+              <a class="post-link" href="/playbook/contributing/understanding-jekyll-and-adding-content/">Understanding Jekyll and Adding Content</a>
+            </h2>
+          </li>
+        
+          <li>
+            <h2>
+              <a class="post-link" href="/playbook/contributing/building-and-commiting/">Building and Comitting</a>
+            </h2>
+          </li>
+        
+    </ol>
 
-<p>Running <code class="highlighter-rouge">gulp</code> at the project root will trigger a bunch of tasks including building your SASS, concatenating your JavaScript, and setting up <a href="https://www.browsersync.io/">BrowserSync</a> and serving up a demo of the website at <code class="highlighter-rouge">localhost:3000</code>. Each time you change a relevant source file the <code class="highlighter-rouge">watch</code> task will re-trigger all the other tasks and automatically inject any changes into the website as you&#8217;re viewing it.</p>
+</div>
 
-<p>Running <code class="highlighter-rouge">gulp</code>, however, only compiles for local viewing and testing. It includes <code class="highlighter-rouge">/_config_local.yml</code> and overwrites the <code class="highlighter-rouge">baseurl</code> and <code class="highlighter-rouge">url</code> settings to ensure all permalinks work within your local instance. Because of this, you do not want to commit these built files to <code class="highlighter-rouge">gh-pages</code>.</p>
-
-<p>To generate the desired files for <code class="highlighter-rouge">gh-pages</code>, you will want to run <code class="highlighter-rouge">gulp --production</code>. This runs all the necessary tasks <em>except</em> running BrowserSync and the <code class="highlighter-rouge">watch</code> task. This command <em>doesn&#8217;t</em> include <code class="highlighter-rouge">/_config_local.yml</code> into the build process which makes the generated permalinks all acceptable for pushing to <code class="highlighter-rouge">gh-pages</code>.</p>
-
-<p>You can commit to <code class="highlighter-rouge">master</code> after running either <code class="highlighter-rouge">gulp</code> or <code class="highlighter-rouge">gulp --production</code> as the generated files are all within the <code class="highlighter-rouge">/_site</code> directory which is included in the <code class="highlighter-rouge">/.gitignore</code> for the root directory.</p>
-
-  </div>
-
-</article>
-
-                    </div>
-
-                    <div class="small-12 medium-3 columns sidebar">
-                        table of contents, maybe
                     </div>
 
             </section>

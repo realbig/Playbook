@@ -30,7 +30,7 @@
         </style>
     </head>
 
-<body class="default-template off-canvas-wrapper">
+<body class="off-canvas-wrapper">
     
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
@@ -74,7 +74,7 @@
 
                 <div class="row">
 
-                    <div class="small-12 medium-9 columns post-content">
+                    <div class="small-12 columns post-content">
                         <article class="post">
 
   <header class="post-header">
@@ -152,14 +152,29 @@
         <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
         <span class="s">permalink</span><span class="pi">:</span> <span class="s">/contributing/:path/</span></code></pre></figure>
 
+<script>
+    document.body.onkeyup = function(e){
+        if (e.keyCode == '37') { window.location = '/contributing/cloning-the-repository/'; }
+        if (e.keyCode == '39') { window.location = '/contributing/building-and-commiting/'; }
+    };
+</script>
+
+<div class="row collections-next-prev">
+
+    <div class="small-12 medium-6 columns prev">
+        <a href="/contributing/cloning-the-repository/" title="Cloning The Repository">Previous: Cloning The Repository</a>
+    </div>
+
+    <div class="small-12 medium-6 columns next">
+        <a href="/contributing/building-and-commiting/" title="Building and Comitting">Next: Building and Comitting</a>
+    </div>
+    
+</div>
+
   </div>
 
 </article>
 
-                    </div>
-
-                    <div class="small-12 medium-3 columns sidebar">
-                        table of contents, maybe
                     </div>
 
             </section>

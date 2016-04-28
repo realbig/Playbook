@@ -30,7 +30,7 @@
         </style>
     </head>
 
-<body class="default-template off-canvas-wrapper">
+<body class="off-canvas-wrapper">
     
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
@@ -74,7 +74,7 @@
 
                 <div class="row">
 
-                    <div class="small-12 medium-9 columns post-content">
+                    <div class="small-12 columns post-content">
                         <article class="post">
 
   <header class="post-header">
@@ -113,14 +113,29 @@
 
 <p><a href="http://bundler.io/">Bundler</a> is similar to <a href="https://www.npmjs.com/package/npm">npm</a> for Ruby projects and will help us manage our Ruby Gem dependencies (Including Jekyll itself)</p>
 
+<script>
+    document.body.onkeyup = function(e){
+        if (e.keyCode == '37') { window.location = ''; }
+        if (e.keyCode == '39') { window.location = '/contributing/cloning-the-repository/'; }
+    };
+</script>
+
+<div class="row collections-next-prev">
+
+    <div class="small-12 medium-6 columns prev">
+        
+    </div>
+
+    <div class="small-12 medium-6 medium-offset-6 columns next">
+        <a href="/contributing/cloning-the-repository/" title="Cloning The Repository">Next: Cloning The Repository</a>
+    </div>
+    
+</div>
+
   </div>
 
 </article>
 
-                    </div>
-
-                    <div class="small-12 medium-3 columns sidebar">
-                        table of contents, maybe
                     </div>
 
             </section>

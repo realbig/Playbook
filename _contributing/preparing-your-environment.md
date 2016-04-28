@@ -1,10 +1,11 @@
 ---
 layout: page
-title:  "Installing Jekyll"
+title:  "Preparing Your Environment"
 date:   2016-04-26 08:39:55-0400
 ---
 
-#### Preparing our Environment
+{{ title }}
+{{ page.last_modified_at }}
 
 To help later on, make sure you have `source ~/.profile` added to your `~/.bash_profile`
 

@@ -10,12 +10,12 @@
 
         {% unless forloop.first %}
             {% assign prevTitle = prev.title %}
-            {% assign prevUrl = {{ prev.url | prepend: site.baseurl }} %}
+            {% assign prevUrl = prev.url | prepend: site.baseurl %}
         {% endunless %}
 
         {% unless forloop.last %}
             {% assign next = document[forloop.index] %}
-            {% assign nextUrl = {{ next.url | prepend: site.baseurl }} %}
+            {% assign nextUrl = next.url | prepend: site.baseurl %}
         {% endunless %}
 
     {% endif %}
@@ -26,8 +26,8 @@
 
 <script>
     document.body.onkeyup = function(e){
-        if (e.keyCode == '37') { window.location = '{{prevUrl}}'; }
-        if (e.keyCode == '39') { window.location = '{{nextUrl}}'; }
+        if (e.keyCode == '37') { window.location = '{{ prevUrl }}'; }
+        if (e.keyCode == '39') { window.location = '{{ nextUrl }}'; }
     };
 </script>
 

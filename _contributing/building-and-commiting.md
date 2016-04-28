@@ -18,4 +18,4 @@ To generate the desired files for `gh-pages`, you will want to run `gulp --produ
 
 You can commit to `master` after running either `gulp` or `gulp --production` as the generated files are all within the `/_site` directory which is included in the `/.gitignore` for the root directory.
 
-{% include collections-prev-next.html %}
+{% include components/collections-prev-next.html %}

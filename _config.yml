@@ -48,8 +48,11 @@ jekyll-archives:
 data:
     nav-main:
         -
-            url: /contributing/installing-jekyll/
-            text: 'Installing Jekyll'
+            url: /about/
+            text: 'About'
+        -
+            url: /contributing/
+            text: 'Contributing'
     
 gems:
   - jekyll-archives

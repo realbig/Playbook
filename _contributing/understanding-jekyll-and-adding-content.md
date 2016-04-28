@@ -85,4 +85,4 @@ Collections can be easily added by creating a relevant entry in `/_config.yml` p
         permalink: /contributing/:path/
 {% endhighlight %}
 
-{% include collections-prev-next.html %}
+{% include components/collections-prev-next.html %}

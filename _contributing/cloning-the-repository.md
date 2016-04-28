@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Cloning The Repository"
+title:  "Cloning the Repository"
 date:   2016-04-26 08:39:55-0400
 collection: contributing
 order: 2
@@ -47,4 +47,4 @@ bundle update
 
 to install all the dependencies necessary for ["Building" step]({{ '/contributing/building/' | prepend: site.baseurl }}) later.
 
-{% include collections-prev-next.html %}
+{% include components/collections-prev-next.html %}

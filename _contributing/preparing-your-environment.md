@@ -47,4 +47,4 @@ gem install bundler
 
 [Bundler](http://bundler.io/) is similar to [npm](https://www.npmjs.com/package/npm) for Ruby projects and will help us manage our Ruby Gem dependencies (Including Jekyll itself)
 
-{% include collections-prev-next.html %}
+{% include components/collections-prev-next.html %}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang=" ">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Understanding Jekyll and Adding Content &ndash; Real Big Playbook</title>
+        <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" />
+        <meta name="google-site-verification" content="">
+        <link rel="shortcut icon" href="/assets/img/icons/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/assets/img/icons/apple-touch-icon-precomposed.png">
+        <link rel="stylesheet" href=/playbook/assets/css/style.css>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <style type="text/css">
+            @font-face {
+                font-family: 'rbmlogo';
+                src:url( /playbook/assets/fonts/icons/rbm-logo.eot?1g7jui );
+                src:url( /playbook/assets/fonts/icons/rbm-logo.eot?1g7jui#iefix ) format('embedded-opentype'),
+                url( /playbook/assets/fonts/icons/rbm-logo.woff?1g7jui ) format('woff'),
+                url( /playbook/assets/fonts/icons/rbm-logo.ttf?1g7jui ) format('truetype'),
+                url( /playbook/assets/fonts/icons/rbm-logo.svg?1g7jui#rbm-logo ) format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+    </head>
+
+<body class="default-template off-canvas-wrapper">
+    
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <div id="offCanvasLeft" class="off-canvas position-left nav-menu" data-off-canvas>
+            test
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            
+            <nav class="top-bar">
+    <div class="top-bar-left mobile-menu show-for-small-only">
+        <div class="menu-icon-wrapper">
+            <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+        </div>
+    </div>
+    <div class="top-bar-left nav-menu">
+        <ul class="menu hide-for-small-only">
+            
+                <li><a href="/playbook/contributing/installing-jekyll/" title="Installing Jekyll">Installing Jekyll</a></li>
+            
+        </ul>
+    </div>
+    <div class="top-bar-section top-bar-logo nav-menu">
+        <ul class="menu">
+            <li>
+                <a href="/playbook/" title="Home">
+                    <span class="stacked-rbm-logo-icon"><span></span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="top-bar-right nav-menu">
+        <ul class="menu hide-for-small-only">
+            
+                <li><a href="/playbook/contributing/installing-jekyll/" title="Installing Jekyll">Installing Jekyll</a></li>
+            
+        </ul>
+    </div>
+</nav>
+
+            <section id="site-content">
+
+                <div class="row">
+
+                    <div class="small-12 medium-9 columns post-content">
+                        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Understanding Jekyll and Adding Content</h1>
+  </header>
+
+  <div class="post-content">
+    
+<p>Jekyll works by converting plain <a href="//daringfireball.net/projects/markdown/">Markdown</a> into HTML using the <a href="//shopify.github.io/liquid/">Liquid Templating Engine</a>. If you&#8217;ve used <a href="//twig.sensiolabs.org/">Twig</a> in the past, Liquid may feel a little familiar to you.</p>
+
+<p>Each bit of content that you contribute is handled the same way in a simple <code class="highlighter-rouge">.md</code> file which Jekyll builds into <code class="highlighter-rouge">.html</code> for you.</p>
+
+<h4 id="templating">Templating</h4>
+
+<p>When creating a Page or Post, the most important thing to ensure you add can be seen at the top of this file:</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="nn">---</span>
+<span class="s">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="s">title</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Understanding</span><span class="nv"> </span><span class="s">Jekyll"</span>
+<span class="s">date</span><span class="pi">:</span>   <span class="s">2016-04-28 08:39:55-0400</span>
+<span class="nn">---</span></code></pre></figure>
+
+<p>This is called &#8220;YAML Front Matter&#8221; and it specifies which file in <code class="highlighter-rouge">/_layouts</code> to use as a base, the Title of the Page/Post, as well as the Published Date. Any number of things that we want to tie to the Page/Post can be placed up here. Think of this as Post Meta, but other things like Taxonomy Terms can be added there as well.</p>
+
+<p>If you take a look at <code class="highlighter-rouge">/_layouts/page.html</code>, which this Post uses for its template, you will see that its YAML Front Matter includes <code class="highlighter-rouge">layout: default</code>. This means that this isn&#8217;t as far back as the rabbit hole goes.</p>
+
+<p><code class="highlighter-rouge">/_layouts/default.html</code> is a much broader file that includes things like the Header and Footer and any wrapping elements, and then has a bit that says <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">content</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> which is where <code class="highlighter-rouge">/_layouts/page.html</code> is included in this case. <code class="highlighter-rouge">/_layouts/page.html</code> also has a spot that says <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">content</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> which is where the current Page/Post is included.</p>
+
+<h4 id="posts-vs-pages-vs-collections">Posts vs Pages vs Collections</h4>
+
+<p>When creating your Pages/Posts, you may want to understand how &#8220;Collections&#8221; work.</p>
+
+<p>&#8220;Collections&#8221; are similar to Custom Post Types in WordPress. This Post is a part of the &#8220;Contributing&#8221; Collection, as you can see from its place in the source files at <code class="highlighter-rouge">/_contributing/understanding-jekyll-and-adding-content.md</code> as well as its Permalink.</p>
+
+<p>Here&#8217;s a nice diagram to help understand when to use a Collection rather than a simple Page or Post.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">+-------------------------------------+         +----------------+
+| Can the things be logically grouped?|---No---&gt;|    Use pages   |
++-------------------------------------+         +----------------+
+                |
+               Yes
+                |
+                V
++-------------------------------------+         +----------------+
+|      Are they grouped by date?      |---No---&gt;|Use a collection|
++-------------------------------------+         +----------------+
+                |
+               Yes
+                |
+                V
++-------------------------------------+
+|            Use posts                |
++-------------------------------------+</code></pre></figure>
+
+<p><a href="//ben.balter.com/2015/02/20/jekyll-collections/">Diagram Source</a></p>
+
+<p>The &#8220;grouping by date&#8221; is a very large distinguishing factor. When creating a Post, you <strong><em>must</em></strong> follow this naming convention:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">YYYY-MM-DD-post-name.md</code></pre></figure>
+
+<p>But if you&#8217;re creating a Page or a Post within a Collection, you only need to include the Post Name for the file name which will be used for the Permalink.</p>
+
+<p>Collections can be easily added by creating a relevant entry in <code class="highlighter-rouge">/_config.yml</code> prior to building the site.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml">    <span class="s">posts</span><span class="pi">:</span>
+        <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+        <span class="s">permalink</span><span class="pi">:</span> <span class="s">/:year/:month/:day/:title/</span>
+    <span class="s">pages</span><span class="pi">:</span>
+        <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+        <span class="s">permalink</span><span class="pi">:</span> <span class="s">/:path/</span>
+    <span class="s">process</span><span class="pi">:</span> 
+        <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+        <span class="s">permalink</span><span class="pi">:</span> <span class="s">/process/:path/</span>
+    <span class="s">contributing</span><span class="pi">:</span> 
+        <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+        <span class="s">permalink</span><span class="pi">:</span> <span class="s">/contributing/:path/</span></code></pre></figure>
+
+  </div>
+
+</article>
+
+                    </div>
+
+                    <div class="small-12 medium-3 columns sidebar">
+                        table of contents, maybe
+                    </div>
+
+            </section>
+
+        </div>
+
+<footer>
+  <nav>
+  <ul class="menu clearfix float-right">
+    
+  </ul>
+</nav>
+</footer>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src=/playbook/assets/js/script.js></script>
+</div>
+</body>
+</html>

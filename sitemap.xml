@@ -11,6 +11,15 @@
 <loc>http://realbig.github.io/playbook/playbook/</loc>
 </url>
 <url>
-<loc>http://realbig.github.io/playbook/playbook/contributing/installing-jekyll/</loc>
+<loc>http://realbig.github.io/playbook/playbook/contributing/cloning-the-repository/</loc>
+</url>
+<url>
+<loc>http://realbig.github.io/playbook/playbook/contributing/preparing-your-environment/</loc>
+</url>
+<url>
+<loc>http://realbig.github.io/playbook/playbook/contributing/building/</loc>
+</url>
+<url>
+<loc>http://realbig.github.io/playbook/playbook/contributing/understanding-jekyll-and-adding-content/</loc>
 </url>
 </urlset>

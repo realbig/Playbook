@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang=" ">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Building &ndash; Real Big Playbook</title>
+        <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" />
+        <meta name="google-site-verification" content="">
+        <link rel="shortcut icon" href="/assets/img/icons/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/assets/img/icons/apple-touch-icon-precomposed.png">
+        <link rel="stylesheet" href=/playbook/assets/css/style.css>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <style type="text/css">
+            @font-face {
+                font-family: 'rbmlogo';
+                src:url( /playbook/assets/fonts/icons/rbm-logo.eot?1g7jui );
+                src:url( /playbook/assets/fonts/icons/rbm-logo.eot?1g7jui#iefix ) format('embedded-opentype'),
+                url( /playbook/assets/fonts/icons/rbm-logo.woff?1g7jui ) format('woff'),
+                url( /playbook/assets/fonts/icons/rbm-logo.ttf?1g7jui ) format('truetype'),
+                url( /playbook/assets/fonts/icons/rbm-logo.svg?1g7jui#rbm-logo ) format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+    </head>
+
+<body class="default-template off-canvas-wrapper">
+    
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <div id="offCanvasLeft" class="off-canvas position-left nav-menu" data-off-canvas>
+            test
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            
+            <nav class="top-bar">
+    <div class="top-bar-left mobile-menu show-for-small-only">
+        <div class="menu-icon-wrapper">
+            <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+        </div>
+    </div>
+    <div class="top-bar-left nav-menu">
+        <ul class="menu hide-for-small-only">
+            
+                <li><a href="/playbook/contributing/installing-jekyll/" title="Installing Jekyll">Installing Jekyll</a></li>
+            
+        </ul>
+    </div>
+    <div class="top-bar-section top-bar-logo nav-menu">
+        <ul class="menu">
+            <li>
+                <a href="/playbook/" title="Home">
+                    <span class="stacked-rbm-logo-icon"><span></span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="top-bar-right nav-menu">
+        <ul class="menu hide-for-small-only">
+            
+                <li><a href="/playbook/contributing/installing-jekyll/" title="Installing Jekyll">Installing Jekyll</a></li>
+            
+        </ul>
+    </div>
+</nav>
+
+            <section id="site-content">
+
+                <div class="row">
+
+                    <div class="small-12 medium-9 columns post-content">
+                        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Building</h1>
+  </header>
+
+  <div class="post-content">
+    
+<p>As you may have noticed in the <a href="/playbook/contributing/cloning-the-repository/">&#8220;Cloning the Repository&#8221; step</a>, this website uses <a href="http://gulpjs.com/">gulp</a> for automating tasks.</p>
+
+<p>Running <code class="highlighter-rouge">gulp</code> at the project root will trigger a bunch of tasks including building your SASS, concatenating your JavaScript, and setting up <a href="https://www.browsersync.io/">BrowserSync</a> and serving up a demo of the website at <code class="highlighter-rouge">localhost:3000</code>. Each time you change a relevant source file the <code class="highlighter-rouge">watch</code> task will re-trigger all the other tasks and automatically inject any changes into the website as you&#8217;re viewing it.</p>
+
+<p>Running <code class="highlighter-rouge">gulp</code>, however, only compiles for local viewing and testing. It includes <code class="highlighter-rouge">/_config_local.yml</code> and overwrites the <code class="highlighter-rouge">baseurl</code> and <code class="highlighter-rouge">url</code> settings to ensure all permalinks work within your local instance. Because of this, you do not want to commit these built files to <code class="highlighter-rouge">gh-pages</code>.</p>
+
+<p>To generate the desired files for <code class="highlighter-rouge">gh-pages</code>, you will want to run <code class="highlighter-rouge">gulp --production</code>. This runs all the necessary tasks <em>except</em> running BrowserSync and the <code class="highlighter-rouge">watch</code> task. This command <em>doesn&#8217;t</em> include <code class="highlighter-rouge">/_config_local.yml</code> into the build process which makes the generated permalinks all acceptable for pushing to <code class="highlighter-rouge">gh-pages</code>.</p>
+
+<p>You can commit to <code class="highlighter-rouge">master</code> after running either <code class="highlighter-rouge">gulp</code> or <code class="highlighter-rouge">gulp --production</code> as the generated files are all within the <code class="highlighter-rouge">/_site</code> directory which is included in the <code class="highlighter-rouge">/.gitignore</code> for the root directory.</p>
+
+  </div>
+
+</article>
+
+                    </div>
+
+                    <div class="small-12 medium-3 columns sidebar">
+                        table of contents, maybe
+                    </div>
+
+            </section>
+
+        </div>
+
+<footer>
+  <nav>
+  <ul class="menu clearfix float-right">
+    
+  </ul>
+</nav>
+</footer>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src=/playbook/assets/js/script.js></script>
+</div>
+</body>
+</html>

@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Installing Jekyll &ndash; Real Big Playbook</title>
+        <title>Cloning The Repository &ndash; Real Big Playbook</title>
         <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 " />
         <meta name="google-site-verification" content="">
@@ -78,41 +78,41 @@
                         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Installing Jekyll</h1>
+    <h1 class="post-title">Cloning The Repository</h1>
   </header>
 
   <div class="post-content">
-    <h4 id="preparing-our-environment">Preparing our Environment</h4>
+    
+<p>This may seem like an obvious step, but bare with me.</p>
 
-<p>To help later on, make sure you have <code class="highlighter-rouge">source ~/.profile</code> added to your <code class="highlighter-rouge">~/.bash_profile</code></p>
+<p>Given that we have two branches, <code class="highlighter-rouge">master</code> which holds the source files and <code class="highlighter-rouge">gh-pages</code> which holds the compiled website, we will need to clone them both in a specific way to most easily work with the files locally.</p>
 
-<p>If you don’t have Homebrew installed, you will want to <a href="http://brew.sh/">go ahead and do that as well</a>.</p>
+<p>First, run</p>
 
-<p>Next within your terminal, run</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git clone https://github.com/realbig/playbook.git</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl -sSL https://get.rvm.io | bash</code></pre></figure>
+<p>into any directory that you would like. After <code class="highlighter-rouge">cd</code>-ing into that directory, run</p>
 
-<p>In order to install <a href="https://rvm.io/">RVM</a> as this will help us easily update and swap between Ruby versions as-needed.</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git clone https://github.com/realbig/playbook.git ./_site</code></pre></figure>
 
-<p>If you get any errors during the installation process, run <code class="highlighter-rouge">brew doctor</code> and follow any of the instructions there. This will likely be the need to run some <code class="highlighter-rouge">brew link</code> commands.</p>
+<p>to clone the repository again within a child directory called <code class="highlighter-rouge">_site</code>.</p>
 
-<p>If you did have errors, run</p>
+<p>Next, <code class="highlighter-rouge">cd</code> into <code class="highlighter-rouge">_site</code> and run</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">rvm reinstall ruby-2.3.0</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git checkout -b origin/gh-pages gh-pages</code></pre></figure>
 
-<p>To reistall Ruby 2.3.0 within your <code class="highlighter-rouge">~/.rvm</code> directory.</p>
+<p>in order to pull down the remote <code class="highlighter-rouge">gh-pages</code> branch into a local branch of the same name.</p>
 
-<p>After successful installation of RVM, go ahead and run</p>
+<p>At this point, I&#8217;d recommend deleting the <code class="highlighter-rouge">master</code> branch for this &#8220;child repository&#8221; by running <code class="highlighter-rouge">git branch -d master</code> to prevent confusion.</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">rvm use ruby-2.3.0</code></pre></figure>
+<p>Now your primary project directory will mirror the remote <code class="highlighter-rouge">master</code> branch and the <code class="highlighter-rouge">_site</code> directory will mirror the remote <code class="highlighter-rouge">gh-pages</code> branch. This will allow you to push code to the <code class="highlighter-rouge">master</code> branch to reflect changes to the source files and to push your generated <code class="highlighter-rouge">_site</code> directory for changes to the compiled website.</p>
 
-<p>This will force any calls to Ruby to use v2.3.0. You can check this by running <code class="highlighter-rouge">ruby -v</code> in your Terminal.</p>
+<p>From here, your final step will be going back up to the primary project directory and running the following commands:</p>
 
-<p>Next run</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">npm install
+bundle update</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">gem install bundler</code></pre></figure>
-
-<p><a href="http://bundler.io/">Bundler</a> is similar to <a href="https://www.npmjs.com/package/npm">npm</a> for Ruby projects and will help us manage our Ruby Gem dependencies (Including Jekyll itself)</p>
+<p>to install all the dependencies necessary for <a href="/playbook/contributing/building/">&#8220;Building&#8221; step</a> later.</p>
 
   </div>
 

@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" lang=" ">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Preparing Your Environment &ndash; Real Big Playbook</title>
+        <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" />
+        <meta name="google-site-verification" content="">
+        <link rel="shortcut icon" href="/assets/img/icons/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/assets/img/icons/apple-touch-icon-precomposed.png">
+        <link rel="stylesheet" href=/playbook/assets/css/style.css>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <style type="text/css">
+            @font-face {
+                font-family: 'rbmlogo';
+                src:url( /playbook/assets/fonts/icons/rbm-logo.eot?1g7jui );
+                src:url( /playbook/assets/fonts/icons/rbm-logo.eot?1g7jui#iefix ) format('embedded-opentype'),
+                url( /playbook/assets/fonts/icons/rbm-logo.woff?1g7jui ) format('woff'),
+                url( /playbook/assets/fonts/icons/rbm-logo.ttf?1g7jui ) format('truetype'),
+                url( /playbook/assets/fonts/icons/rbm-logo.svg?1g7jui#rbm-logo ) format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+    </head>
+
+<body class="default-template off-canvas-wrapper">
+    
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <div id="offCanvasLeft" class="off-canvas position-left nav-menu" data-off-canvas>
+            test
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            
+            <nav class="top-bar">
+    <div class="top-bar-left mobile-menu show-for-small-only">
+        <div class="menu-icon-wrapper">
+            <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+        </div>
+    </div>
+    <div class="top-bar-left nav-menu">
+        <ul class="menu hide-for-small-only">
+            
+                <li><a href="/playbook/contributing/installing-jekyll/" title="Installing Jekyll">Installing Jekyll</a></li>
+            
+        </ul>
+    </div>
+    <div class="top-bar-section top-bar-logo nav-menu">
+        <ul class="menu">
+            <li>
+                <a href="/playbook/" title="Home">
+                    <span class="stacked-rbm-logo-icon"><span></span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="top-bar-right nav-menu">
+        <ul class="menu hide-for-small-only">
+            
+                <li><a href="/playbook/contributing/installing-jekyll/" title="Installing Jekyll">Installing Jekyll</a></li>
+            
+        </ul>
+    </div>
+</nav>
+
+            <section id="site-content">
+
+                <div class="row">
+
+                    <div class="small-12 medium-9 columns post-content">
+                        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Preparing Your Environment</h1>
+  </header>
+
+  <div class="post-content">
+    
+<p>To help later on, make sure you have <code class="highlighter-rouge">source ~/.profile</code> added to your <code class="highlighter-rouge">~/.bash_profile</code></p>
+
+<p>If you don&#8217;t have Homebrew installed, you will want to <a href="http://brew.sh/">go ahead and do that as well</a>.</p>
+
+<p>Next within your terminal, run</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl -sSL https://get.rvm.io | bash</code></pre></figure>
+
+<p>In order to install <a href="https://rvm.io/">RVM</a> as this will help us easily update and swap between Ruby versions as-needed.</p>
+
+<p>If you get any errors during the installation process, run <code class="highlighter-rouge">brew doctor</code> and follow any of the instructions there. This will likely be the need to run some <code class="highlighter-rouge">brew link</code> commands.</p>
+
+<p>If you did have errors, run</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">rvm reinstall ruby-2.3.0</code></pre></figure>
+
+<p>To reistall Ruby 2.3.0 within your <code class="highlighter-rouge">~/.rvm</code> directory.</p>
+
+<p>After successful installation of RVM, go ahead and run</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">rvm use ruby-2.3.0</code></pre></figure>
+
+<p>This will force any calls to Ruby to use v2.3.0. You can check this by running <code class="highlighter-rouge">ruby -v</code> in your Terminal.</p>
+
+<p>Next run</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">gem install bundler</code></pre></figure>
+
+<p><a href="http://bundler.io/">Bundler</a> is similar to <a href="https://www.npmjs.com/package/npm">npm</a> for Ruby projects and will help us manage our Ruby Gem dependencies (Including Jekyll itself)</p>
+
+  </div>
+
+</article>
+
+                    </div>
+
+                    <div class="small-12 medium-3 columns sidebar">
+                        table of contents, maybe
+                    </div>
+
+            </section>
+
+        </div>
+
+<footer>
+  <nav>
+  <ul class="menu clearfix float-right">
+    
+  </ul>
+</nav>
+</footer>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src=/playbook/assets/js/script.js></script>
+</div>
+</body>
+</html>

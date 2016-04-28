@@ -2,6 +2,7 @@
 layout: page
 title:  "Building and Comitting"
 date:   2016-04-28 08:39:55-0400
+collection: contributing
 order: 4
 ---
 

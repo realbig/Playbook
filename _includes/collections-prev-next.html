@@ -1,20 +1,27 @@
-{% capture theCollection %}{{page.collection}}{% endcapture %}
+{% capture the_collection %}{{ page.collection }}{% endcapture %}
+
 {% if page.collection %}
-    {% assign document = site[theCollection] | sort: 'order' %}
+    {% assign document = site[the_collection] | sort: 'order' %}
 {% endif %}
 
 {% for links in document %}
+
     {% if links.title == page.title %}
+
         {% unless forloop.first %}
             {% assign prevTitle = prev.title %}
-            {% assign prevUrl = prev.url %}
+            {% assign prevUrl = {{ prev.url | prepend: site.baseurl }} %}
         {% endunless %}
+
         {% unless forloop.last %}
             {% assign next = document[forloop.index] %}
-            {% assign nextUrl = next.url %}
+            {% assign nextUrl = {{ next.url | prepend: site.baseurl }} %}
         {% endunless %}
+
     {% endif %}
+
     {% assign prev = links %}
+
 {% endfor %}
 
 <script>

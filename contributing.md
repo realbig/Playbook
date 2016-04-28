@@ -2,7 +2,6 @@
 layout: default
 title: "Contributing To This Website"
 permalink: /contributing/
-collection: contributing
 ---
 
 <div class="home">

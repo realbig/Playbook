@@ -2,6 +2,7 @@
 layout: page
 title:  "Understanding Jekyll and Adding Content"
 date:   2016-04-28 08:39:55-0400
+collection: contributing
 order: 3
 ---
 

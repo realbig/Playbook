@@ -2,6 +2,7 @@
 layout: page
 title:  "Preparing Your Environment"
 date:   2016-04-26 08:39:55-0400
+collection: contributing
 order: 1
 ---
 

@@ -34,11 +34,19 @@
 <div class="row collections-next-prev">
 
     <div class="small-12 medium-6 columns prev">
-        {% if prevUrl %}<a href="{{prevUrl}}" title="{{ prevTitle }}">Previous: {{ prevTitle }}</a>{% endif %}
+        {% if prevUrl %}
+            <a href="{{prevUrl}}" class="button secondary slide-left" title="{{ prevTitle }}">
+                <span class="button-text">Previous: {{ prevTitle }}</span>
+            </a>
+        {% endif %}
     </div>
 
     <div class="small-12 medium-6 {% unless prevUrl %}medium-offset-6 {% endunless %}columns next">
-        {% if nextUrl %}<a href="{{nextUrl}}" title="{{ next.title }}">Next: {{ next.title }}</a>{% endif %}
+        {% if nextUrl %}
+            <a href="{{nextUrl}}" class="button secondary slide-right" title="{{ next.title }}">
+                <span class="button-text">Next: {{ next.title }}</span>
+            </a>
+        {% endif %}
     </div>
     
 </div>

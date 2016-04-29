@@ -29,7 +29,7 @@ If you did have errors, run
 rvm reinstall ruby-2.3.0
 {% endhighlight %}
 
-To reistall Ruby 2.3.0 within your `~/.rvm` directory.
+To reinstall Ruby 2.3.0 within your `~/.rvm` directory.
 
 After successful installation of RVM, go ahead and run
 

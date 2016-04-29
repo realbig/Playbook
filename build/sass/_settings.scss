@@ -8,6 +8,15 @@ $dark-color: #222;
 $light-color: #ddd;
 
 $primary-color: #599E00;
+$secondary-color: #1560a6;
+
+$foundation-palette: (
+    primary: $primary-color,
+    secondary: $secondary-color,
+    success: #3adb76,
+    warning: #ffae00,
+    alert: #ec5840,
+);
 
 $topbar-background: $dark-color;
 $offcanvas-background: $topbar-background;

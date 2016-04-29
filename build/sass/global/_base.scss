@@ -45,6 +45,26 @@ body {
     padding-top: 3.5em;
 }
 
-a {
-    @include link-hover-style( $secondary-color );
+a:not(.button) {
+    @include link-hover-style( $primary-color );
+}
+
+@each $name, $color in $foundation-palette {
+    
+    .button.#{$name}.slide-left {
+        @include background-slide-in( $color, 'left' );
+    }
+    
+    .button.#{$name}.slide-right {
+        @include background-slide-in( $color, 'right' );
+    }
+    
+    .button.#{$name}.slide-top {
+        @include background-slide-in( $color, 'top' );
+    }
+    
+    .button.#{$name}.slide-bottom {
+        @include background-slide-in( $color, 'bottom' );
+    }
+    
 }

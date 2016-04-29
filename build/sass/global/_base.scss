@@ -46,7 +46,7 @@ body {
 }
 
 a:not(.button) {
-    @include link-hover-style( $primary-color );
+    @include link-hover-style( $anchor-color-hover );
 }
 
 @each $name, $color in $foundation-palette {

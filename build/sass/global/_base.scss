@@ -44,3 +44,7 @@ body {
 #site-content {
     padding-top: 3.5em;
 }
+
+a {
+    @include link-hover-style( $secondary-color );
+}

@@ -1,0 +1,10 @@
+<ul class="menu vertical">
+    <li>
+        <a href="{{ '/' | prepend: site.baseurl }}" title="Home">Home</a>
+    </li>
+    {% for item in site.data.nav-main %}
+        <li>
+            <a href="{{ item.url | prepend: site.baseurl }}" title="{{ item.text }}">{{ item.text }}</a>
+        </li>
+    {% endfor %}
+</ul>

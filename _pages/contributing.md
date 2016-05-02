@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Contributing To This Website"
-permalink: /contributing/
 ---
 
 <div class="home">

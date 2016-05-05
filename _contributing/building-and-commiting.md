@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Building and Comitting"
+title:  "Building and Committing"
 date:   2016-04-28 08:39:55-0400
 collection: contributing
 order: 4
@@ -8,7 +8,7 @@ order: 4
 
 {{ title }}
 
-As you may have noticed in the ["Cloning the Repository step]({{ '/contributing/cloning-the-repository/' | prepend: site.baseurl }}), this website uses [gulp](http://gulpjs.com/) for automating tasks.
+As you may have noticed in the ["Cloning the Repository step"]({{ '/contributing/cloning-the-repository/' | prepend: site.baseurl }}), this website uses [gulp](http://gulpjs.com/) for automating tasks.
 
 Running `gulp` at the project root will trigger a bunch of tasks including building your SASS, concatenating your JavaScript, and setting up [BrowserSync](https://www.browsersync.io/) and serving up a demo of the website at `localhost:3000`. Each time you change a relevant source file the `watch` task will re-trigger all the other tasks and automatically inject any changes into the website as you're viewing it.
 

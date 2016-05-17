@@ -76,3 +76,5 @@ exclude:
   - "package.json"
   - "README.md"
   - "rev-manifest.json"
+  - "production.sh"
+  - "init.sh"

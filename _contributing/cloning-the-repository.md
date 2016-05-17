@@ -21,30 +21,12 @@ git clone https://github.com/realbig/playbook.git
 into any directory that you would like. After `cd`-ing into that directory, run 
 
 {% highlight shell %}
-git clone https://github.com/realbig/playbook.git ./_site
+chmod +x init.sh
+./init.sh
 {% endhighlight %}
 
-to clone the repository again within a child directory called `_site`.
-
-Next, `cd` into `_site` and run
-
-{% highlight shell %}
-git checkout -b origin/gh-pages gh-pages
-{% endhighlight %}
-
-in order to pull down the remote `gh-pages` branch into a local branch of the same name.
-
-At this point, I'd recommend deleting the `master` branch for this "child repository" by running `git branch -d master` to prevent confusion.
+This will set up the compiled site (the `gh-pages` branch) within the `_site` directory for you. It will also install all the dependencies necessary for ["Building" step]({{ '/contributing/building/' | prepend: site.baseurl }}) later.
 
 Now your primary project directory will mirror the remote `master` branch and the `_site` directory will mirror the remote `gh-pages` branch. This will allow you to push code to the `master` branch to reflect changes to the source files and to push your generated `_site` directory for changes to the compiled website.
-
-From here, your final step will be going back up to the primary project directory and running the following commands:
-
-{% highlight shell %}
-npm install
-bundle update
-{% endhighlight %}
-
-to install all the dependencies necessary for ["Building" step]({{ '/contributing/building/' | prepend: site.baseurl }}) later.
 
 {% include components/collections-prev-next.html %}

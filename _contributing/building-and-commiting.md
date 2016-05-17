@@ -16,6 +16,15 @@ Running `gulp`, however, only compiles for local viewing and testing. It include
 
 To generate the desired files for `gh-pages`, you will want to run `gulp --production`. This runs all the necessary tasks *except* running BrowserSync and the `watch` task. This command *doesn't* include `/_config_local.yml` into the build process which makes the generated permalinks all acceptable for pushing to `gh-pages`.
 
+To automate building and commiting to `gh-pages`, you can run
+
+{% highlight shell %}
+chmod +x production.sh
+./production.sh
+{% endhighlight %}
+
+This runs `gulp --production`, asks for a commit message, and then lets you optionally push to `gh-pages`.
+
 You can commit to `master` after running either `gulp` or `gulp --production` as the generated files are all within the `/_site` directory which is included in the `/.gitignore` for the root directory.
 
 {% include components/collections-prev-next.html %}

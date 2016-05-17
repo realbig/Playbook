@@ -107,26 +107,12 @@
 
 <p>into any directory that you would like. After <code class="highlighter-rouge">cd</code>-ing into that directory, run</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git clone https://github.com/realbig/playbook.git ./_site</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">chmod +x init.sh
+./init.sh</code></pre></figure>
 
-<p>to clone the repository again within a child directory called <code class="highlighter-rouge">_site</code>.</p>
-
-<p>Next, <code class="highlighter-rouge">cd</code> into <code class="highlighter-rouge">_site</code> and run</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git checkout -b origin/gh-pages gh-pages</code></pre></figure>
-
-<p>in order to pull down the remote <code class="highlighter-rouge">gh-pages</code> branch into a local branch of the same name.</p>
-
-<p>At this point, I&#8217;d recommend deleting the <code class="highlighter-rouge">master</code> branch for this &#8220;child repository&#8221; by running <code class="highlighter-rouge">git branch -d master</code> to prevent confusion.</p>
+<p>This will set up the compiled site (the <code class="highlighter-rouge">gh-pages</code> branch) within the <code class="highlighter-rouge">_site</code> directory for you. It will also install all the dependencies necessary for <a href="/playbook/contributing/building/">&#8220;Building&#8221; step</a> later.</p>
 
 <p>Now your primary project directory will mirror the remote <code class="highlighter-rouge">master</code> branch and the <code class="highlighter-rouge">_site</code> directory will mirror the remote <code class="highlighter-rouge">gh-pages</code> branch. This will allow you to push code to the <code class="highlighter-rouge">master</code> branch to reflect changes to the source files and to push your generated <code class="highlighter-rouge">_site</code> directory for changes to the compiled website.</p>
-
-<p>From here, your final step will be going back up to the primary project directory and running the following commands:</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">npm install
-bundle update</code></pre></figure>
-
-<p>to install all the dependencies necessary for <a href="/playbook/contributing/building/">&#8220;Building&#8221; step</a> later.</p>
 
 <script>
     document.body.onkeyup = function(e){

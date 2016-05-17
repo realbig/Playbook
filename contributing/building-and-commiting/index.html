@@ -105,6 +105,13 @@
 
 <p>To generate the desired files for <code class="highlighter-rouge">gh-pages</code>, you will want to run <code class="highlighter-rouge">gulp --production</code>. This runs all the necessary tasks <em>except</em> running BrowserSync and the <code class="highlighter-rouge">watch</code> task. This command <em>doesn&#8217;t</em> include <code class="highlighter-rouge">/_config_local.yml</code> into the build process which makes the generated permalinks all acceptable for pushing to <code class="highlighter-rouge">gh-pages</code>.</p>
 
+<p>To automate building and commiting to <code class="highlighter-rouge">gh-pages</code>, you can run</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">chmod +x production.sh
+./production.sh</code></pre></figure>
+
+<p>This runs <code class="highlighter-rouge">gulp --production</code>, asks for a commit message, and then lets you optionally push to <code class="highlighter-rouge">gh-pages</code>.</p>
+
 <p>You can commit to <code class="highlighter-rouge">master</code> after running either <code class="highlighter-rouge">gulp</code> or <code class="highlighter-rouge">gulp --production</code> as the generated files are all within the <code class="highlighter-rouge">/_site</code> directory which is included in the <code class="highlighter-rouge">/.gitignore</code> for the root directory.</p>
 
 <script>

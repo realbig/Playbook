@@ -57,6 +57,7 @@ data:
 gems:
   - jekyll-archives
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 exclude:
   - "/assets/"

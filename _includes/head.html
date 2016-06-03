@@ -8,6 +8,7 @@
         <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
         <meta name="description" content="{{ site.description }}" />
         <meta name="google-site-verification" content="{{ site.google-verification }}">
+        {% seo %}
         <link rel="shortcut icon" href={{ "/assets/favicon.png" | prepend: site.baseurl }}>
         <link rel="stylesheet" href={{ "/assets/css/style.css" | prepend: site.baseurl }}>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
